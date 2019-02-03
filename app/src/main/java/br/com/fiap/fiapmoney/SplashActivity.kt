@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.animation.AnimationUtils
+import br.com.fiap.fiapmoney.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
@@ -26,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
         ivLogo.startAnimation(anim)
         //Chama a próxima tela após 3,5 segundos definido na SPLASH_DISPLAY_LENGTH
         Handler().postDelayed({
-            val proximaTela = Intent(this@SplashActivity, ActivityLogin::class.java)
+            val proximaTela = Intent(this@SplashActivity, LoginActivity::class.java)
             startActivity(proximaTela)
             finish()
         }, TEMPO_AGUARDO_SPLASHSCREEN)
